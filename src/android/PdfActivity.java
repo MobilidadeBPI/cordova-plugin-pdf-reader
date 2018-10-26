@@ -105,7 +105,7 @@ public class PdfActivity extends AppCompatActivity
 
     btnPressed = false;
     btnBackPressed = false;
-      
+
     if(btnsList.size() == 0){
       footerBar.setVisibility(View.GONE);
     }else {
@@ -123,6 +123,8 @@ public class PdfActivity extends AppCompatActivity
           ListBtnView.get(i).setTextColor(Color.WHITE);
         }
 
+        //Every button begins enabled and we mark them false if needScrollToEnd
+        ListBtnView.get(i).setEnabled(true);
         if (btnsList.get(i).isDisabledUntilEOF() != null && btnsList.get(i).isDisabledUntilEOF().equalsIgnoreCase("true")) {
           ListBtnView.get(i).setEnabled(false);
         }
@@ -143,17 +145,13 @@ public class PdfActivity extends AppCompatActivity
     headerTitle = (TextView) findViewById(getIdResourceByName("WebViewHeaderTitle"));
     headerTitle.setText(title);
 
-    btn1.setEnabled(false);
-    btn2.setEnabled(false);
-    btn3.setEnabled(false);
-
     if(urlString != null){
 
       ProgressBar loader = (ProgressBar)findViewById(getIdResourceByName("progressBarLoadingFile"));
       loader.setVisibility(View.GONE);
       loader.setVisibility(View.VISIBLE);
 
-      
+
 
       pdfUtils.downloadAndSaveFile(this, title + ".pdf", urlString, new PdfUtils.IDownloadCallback() {
         @Override
@@ -195,7 +193,7 @@ public class PdfActivity extends AppCompatActivity
       }
     }
   }
-            
+
   @Override
   public void onBackPressed() {
     btnBackPressed = true;
