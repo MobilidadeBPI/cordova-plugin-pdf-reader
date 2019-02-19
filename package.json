@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-pdf-reader",
-  "version": "2.4.1",
+  "version": "2.5.1",
   "description": "Open pdf in a webview",
   "cordova": {
     "id": "cordova-plugin-pdf-reader",
