@@ -1,12 +1,9 @@
 package org.apache.cordova.pdfpluginmanager;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,28 +16,18 @@ import android.widget.TextView;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
 import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
-import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 
 import org.apache.cordova.PluginResult;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.lang.reflect.Field;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static org.apache.cordova.pdfpluginmanager.PDFViewer.btnsList;
 import static org.apache.cordova.pdfpluginmanager.PDFViewer.callbackContext;
 
 public class PdfActivity extends AppCompatActivity
-        implements OnPageChangeListener, OnLoadCompleteListener {
+        implements OnPageChangeListener, OnLoadCompleteListener, ScrollEndListener {
 
   int pageNumber = 0;
 
@@ -195,6 +182,17 @@ public class PdfActivity extends AppCompatActivity
   }
 
   @Override
+  public void onBottomOfScrollReached(){
+    if(hasReachedEndOfFile) return;
+
+    hasReachedEndOfFile = true;
+    for (int i = 0; i < ListBtnView.size(); i++) {
+      ListBtnView.get(i).setEnabled(true);
+    }
+
+  }
+
+  @Override
   public void onBackPressed() {
     btnBackPressed = true;
     super.onBackPressed();
@@ -264,6 +262,7 @@ public class PdfActivity extends AppCompatActivity
 
     PDFView pdfView = (PDFView) findViewById(getIdResourceByName("pdfView"));
 
+
     LinearLayout header =
             (LinearLayout) findViewById(getIdResourceByName("pdf_layout_header"));
 
@@ -301,7 +300,7 @@ public class PdfActivity extends AppCompatActivity
             .onPageChange(this)
             .enableAnnotationRendering(true)
             .onLoad(this)
-            .scrollHandle(new DefaultScrollHandle(this))
+            .scrollHandle(new MyScrolHandler(this, this)) //DefaultScrollHandle
             .load();
 
 

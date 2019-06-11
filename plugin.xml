@@ -33,6 +33,7 @@
       </config-file>
 
       <source-file src="src/android/PDFViewer.java" target-dir="src/org/apache/cordova/pdfpluginmanager" />
+      <source-file src="src/android/MyScrolHandler.java" target-dir="src/org/apache/cordova/pdfpluginmanager" />
       <source-file src="src/android/PdfActivity.java" target-dir="src/org/apache/cordova/pdfpluginmanager" />
       <source-file src="src/android/PdfUtils.java" target-dir="src/org/apache/cordova/pdfpluginmanager" />
       <source-file src="src/android/BtnObject.java" target-dir="src/org/apache/cordova/pdfpluginmanager" />
