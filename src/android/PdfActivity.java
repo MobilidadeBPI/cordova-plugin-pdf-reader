@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -286,7 +287,9 @@ public class PdfActivity extends AppCompatActivity
         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
         sharingIntent.putExtra(Intent.EXTRA_EMAIL, "");
         sharingIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
-        sharingIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+        sharingIntent.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(PdfActivity.this, getApplicationContext().getPackageName() + ".pdfprovider", file));
+        sharingIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        //sharingIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
         sharingIntent.setType("application/pdf");
         startActivity(Intent.createChooser(sharingIntent, "Share via"));
       }
