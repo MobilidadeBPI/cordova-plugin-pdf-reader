@@ -33,7 +33,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
+                android:resource="@xml/pdf_reader_provider_paths" />
         </provider>
       </config-file>
 
@@ -67,7 +67,7 @@
       <source-file src="res/android/values/colors_pdf.xml" target-dir="res/values" />
       <source-file src="res/android/values/strings_pdf.xml" target-dir="res/values" />
       <source-file src="res/android/values/styles_pdf.xml" target-dir="res/values" />
-      <source-file src="res/android/xml/provider_paths.xml" target-dir="res/xml" />
+      <source-file src="res/android/xml/pdf_reader_provider_paths.xml" target-dir="res/xml" />
       <source-file src="assets/fonts/gothic_trade_bold.ttf" target-dir="assets/fonts" />
       <source-file src="assets/fonts/lucinda_grande_regular.ttf" target-dir="assets/fonts" />
 
