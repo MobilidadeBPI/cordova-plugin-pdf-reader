@@ -26,15 +26,16 @@
         <activity android:name="org.apache.cordova.pdfpluginmanager.PdfActivity" android:label="PdfActivity"
         android:screenOrientation="portrait" android:theme="@style/PdfTheme"/>
 
-        <provider
-            android:authorities="loc.gbpiweb.dev.ext.cordovaplugin.pdfprovider"
-            android:name="android.support.v4.content.FileProvider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/pdf_reader_provider_paths" />
+        <provider 
+            android:authorities="${applicationId}.pdfprovider" 
+            android:name="org.apache.cordova.pdfpluginmanager.PDFFileProvider"
+            android:exported="false" 
+            android:grantUriPermissions="true" >
+            <meta-data 
+              android:name="android.support.FILE_PROVIDER_PATHS" 
+              android:resource="@xml/provider_paths" />
         </provider>
+        
       </config-file>
 
       <config-file target="AndroidManifest.xml" parent="/*">
@@ -48,6 +49,7 @@
       <source-file src="src/android/PdfUtils.java" target-dir="src/org/apache/cordova/pdfpluginmanager" />
       <source-file src="src/android/BtnObject.java" target-dir="src/org/apache/cordova/pdfpluginmanager" />
       <source-file src="src/android/ScrollEndListener.java" target-dir="src/org/apache/cordova/pdfpluginmanager" />
+      <source-file src="src/android/PDFFileProvider.java" target-dir="src/org/apache/cordova/pdfpluginmanager" />
       <source-file src="res/android/color/btn_text.xml" target-dir="res/color" />
       <source-file src="res/android/drawable/btn_selector.xml" target-dir="res/drawable" />
       <source-file src="res/android/drawable/btn_unchecked.xml" target-dir="res/drawable" />
