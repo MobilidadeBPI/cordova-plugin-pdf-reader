@@ -6,9 +6,9 @@
     <item android:state_enabled="false" >
         <shape>
             <corners
-                android:radius="3dp"
+                android:radius="4dp"
                 />
-            <solid android:color="@color/grayed_out" />
+            <solid android:color="@color/btn_cor_principal_disabled" />
             <padding
                 android:left="0dp"
                 android:top="0dp"
@@ -21,9 +21,9 @@
     <item android:state_pressed="true" >
         <shape>
             <corners
-                android:radius="3dp"
+                android:radius="4dp"
                 />
-            <solid android:color="@color/blue" />
+            <solid android:color="@color/btn_cor_principal" />
             <padding
                 android:left="0dp"
                 android:top="0dp"
@@ -36,9 +36,9 @@
     <item android:state_focused="true" >
         <shape>
             <corners
-                android:radius="3dp"
+                android:radius="4dp"
                 />
-            <solid android:color="@color/blue" />
+            <solid android:color="@color/btn_cor_principal" />
             <padding
                 android:left="0dp"
                 android:top="0dp"
@@ -51,9 +51,9 @@
     <item>
         <shape>
             <corners
-                android:radius="3dp"
+                android:radius="4dp"
                 />
-            <solid android:color="@color/blue" />
+            <solid android:color="@color/btn_cor_principal" />
             <padding
                 android:left="0dp"
                 android:top="0dp"

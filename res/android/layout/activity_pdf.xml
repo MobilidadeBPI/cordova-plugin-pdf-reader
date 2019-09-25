@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_pdf"
-    android:background="@color/bg_color"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -29,7 +29,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@color/bg_color">
+        android:background="@color/white">
 
         <TextView
             android:id="@+id/warning_disabled_btns"
@@ -92,7 +92,7 @@
         android:id="@+id/progressBarLoadingFile"
         android:indeterminate="true"
         android:indeterminateTintMode="src_atop"
-        android:indeterminateTint="@color/header_orange"
+        android:indeterminateTint="@color/btn_cor_principal"
         android:layout_width="80px"
         android:layout_height="80px"
         android:layout_centerHorizontal="true"

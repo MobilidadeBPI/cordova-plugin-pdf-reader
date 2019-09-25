@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:baselineAligned="true"
-        android:background="@color/header_orange">
+        android:background="@color/header_white">
 
         <RelativeLayout
             android:id="@+id/faBackButton"
@@ -36,7 +36,7 @@
             android:textSize="18dp"
             android:layout_centerInParent="true"
             android:gravity="center_vertical"
-            android:textColor="@color/white"
+            android:textColor="@color/text_primario"
             android:textStyle="bold" />
 
         <Button
@@ -52,4 +52,8 @@
             android:layout_alignParentRight="true"
         />
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee"/>
 </LinearLayout>

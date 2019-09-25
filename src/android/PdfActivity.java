@@ -3,7 +3,6 @@ package org.apache.cordova.pdfpluginmanager;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
@@ -224,15 +223,12 @@ public class PdfActivity extends AppCompatActivity
   public void setTypefaces(){
     Typeface font1 = Typeface.createFromAsset(
             this.getAssets(),
-            "fonts/gothic_trade_bold.ttf");
+            "fonts/Barlow-Regular.ttf");
     headerTitle.setTypeface(font1);
 
-    Typeface font2 = Typeface.createFromAsset(
-            this.getAssets(),
-            "fonts/lucinda_grande_regular.ttf");
-    btn1.setTypeface(font2);
-    btn2.setTypeface(font2);
-    btn3.setTypeface(font2);
+    btn1.setTypeface(font1);
+    btn2.setTypeface(font1);
+    btn3.setTypeface(font1);
   }
 
   public int getIdResourceByName(String resName) {

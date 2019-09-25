@@ -2,10 +2,13 @@
 <resources>
 
     <color name="bg_color">#eee</color>
-    <color name="header_orange">#F60</color>
+    <color name="header_white">#fff</color>
     <color name="transparent">#00000000</color>
     <color name="white">#ffffff</color>
     <color name="blue">#000053</color>
     <color name="grayed_out">#676697</color>
+    <color name="text_primario">#4D4D4D</color>
+    <color name="btn_cor_principal">#FF6600</color>
+    <color name="btn_cor_principal_disabled">#66FFC299</color>
 
 </resources>
