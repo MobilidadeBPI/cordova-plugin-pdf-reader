@@ -60,7 +60,8 @@
                 android:layout_marginRight="16dp"
                 android:textAllCaps="false"
                 android:textColor="@color/btn_text"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                style="?android:attr/borderlessButtonStyle" />
 
             <Button android:id="@+id/btn2"
                 android:layout_width="wrap_content"
@@ -72,7 +73,8 @@
                 android:layout_marginRight="16dp"
                 android:textAllCaps="false"
                 android:textColor="@color/btn_text"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                style="?android:attr/borderlessButtonStyle" />
 
             <Button android:id="@+id/btn3"
                 android:layout_width="wrap_content"
@@ -84,7 +86,8 @@
                 android:layout_marginRight="16dp"
                 android:textAllCaps="false"
                 android:textColor="@color/btn_text"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                style="?android:attr/borderlessButtonStyle" />
         </LinearLayout>
     </LinearLayout>
 
