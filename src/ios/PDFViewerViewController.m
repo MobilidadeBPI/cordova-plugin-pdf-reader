@@ -6,12 +6,16 @@
 //  Copyright © 2016 BPI. All rights reserved.
 //
 
-#import "PdfViewerViewController.h"
+#import "PDFViewerViewController.h"
 #import "UIColor+BPIColor.h"
 
 #define CUSTOM_ORANGE_COLOR [UIColor colorWithRed:255.0/255.0 green:102.0/255.0 blue:0.0/255.0 alpha:1]
 #define CUSTOM_BLUE_COLOR [UIColor colorWithRed:0/255.0 green:0/255.0 blue:83/255.0 alpha:1]
 #define CUSTOM_BLUE_COLOR_DISABLED [UIColor colorWithRed:0.40 green:0.40 blue:0.59 alpha:1.00]
+
+#define ORANGE_BPI      @"#FF6600"
+#define ORANGE_DISABLED @"#FFC299"
+
 
 @interface PDFViewerViewController ()
 
@@ -138,13 +142,12 @@
     [super viewDidLoad];
 
     self.webView.delegate = self;
-    UIColor *btnBorderColor = CUSTOM_BLUE_COLOR;
     [[self.btn1 layer] setBorderWidth:1.0];
-    [[self.btn1 layer] setBorderColor:[[UIColor colorWithHexString:@"#000053"] CGColor]];
+    [[self.btn1 layer] setBorderColor:[[UIColor colorWithHexString:ORANGE_BPI] CGColor]];
     [[self.btn2 layer] setBorderWidth:1.0];
-    [[self.btn2 layer] setBorderColor:[[UIColor colorWithHexString:@"#000053"] CGColor]];
+    [[self.btn2 layer] setBorderColor:[[UIColor colorWithHexString:ORANGE_BPI] CGColor]];
     [[self.btn3 layer] setBorderWidth:1.0];
-    [[self.btn3 layer] setBorderColor:[[UIColor colorWithHexString:@"#000053"] CGColor]];
+    [[self.btn3 layer] setBorderColor:[[UIColor colorWithHexString:ORANGE_BPI] CGColor]];
     self.arrayButtons = [NSArray arrayWithObjects: self.btn1,self.btn2,self.btn3, nil];
     [self setMyButtons:self.buttons];
 
@@ -177,15 +180,12 @@
         [self.lblDescription removeFromSuperview];
     }
     
-   // self.header.translatesAutoresizingMaskIntoConstraints = NO;
+
     self.constraintHeightHeader.constant  = [UIApplication sharedApplication].statusBarFrame.size.height > 20 ? 84.0 : self.constraintHeightHeader.constant;
     self.constraintCenterBack.constant = [UIApplication sharedApplication].statusBarFrame.size.height / 2;
     self.constraintCenterShare.constant = [UIApplication sharedApplication].statusBarFrame.size.height / 2;
     self.constraintCenterTitle.constant = [UIApplication sharedApplication].statusBarFrame.size.height / 2;
     
-//    [self.header updateConstraintsIfNeeded];
-//    [self.view layoutIfNeeded];
-//    [self.header layoutIfNeeded];
     
     self.webView.scrollView.delegate = self;
 }
@@ -193,13 +193,13 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    
+    /*[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
 
     if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
         statusBar.backgroundColor = [UIColor clearColor];
-    }
+    }*/
 }
 
 
@@ -327,8 +327,8 @@
             if([needsScrolltoEnd isEqualToString:@"true"])
             {
                 currentButton.enabled = YES;
-                [currentButton setBackgroundColor:CUSTOM_BLUE_COLOR];
-                [[currentButton layer] setBorderColor:[CUSTOM_BLUE_COLOR CGColor]];
+                [currentButton setBackgroundColor:[UIColor colorWithHexString:ORANGE_BPI]];
+                [[currentButton layer] setBorderColor:[[UIColor colorWithHexString:ORANGE_BPI] CGColor]];
             }
             
             ++i;
@@ -344,18 +344,11 @@
 #pragma mark - Utilities
 - (void)setupTitleHeader
 {
-    UIStatusBarStyle statusbarStyle =UIStatusBarStyleLightContent;
-    UIColor *statusbarBackgroundColor =CUSTOM_ORANGE_COLOR;
+    [self preferredStatusBarStyle];
     
-    [[UIApplication sharedApplication] setStatusBarStyle:statusbarStyle animated:YES];
-    
-    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
-    if ([statusBar respondsToSelector:@selector(setBackgroundColor:)])
-        statusBar.backgroundColor = statusbarBackgroundColor;
-
     [self setNeedsStatusBarAppearanceUpdate];
     [self.titleLbl setText:self.viewTitle];
-    [self.titleLbl setFont:[UIFont fontWithName:@"TradeGothicBPI Bold" size:17]];
+    [self.titleLbl setFont:[UIFont fontWithName:@"Barlow Regular" size:17]];
 }
 
 -(void) showButtonsFromListSize: (long) size
@@ -398,7 +391,7 @@
 
 -(void) setMyButtons:(NSArray *)buttons
 {
-    UIColor *btnBackgroundColor = CUSTOM_BLUE_COLOR;
+    UIColor *btnBackgroundColor = [UIColor colorWithHexString:ORANGE_BPI];
     
     [self showButtonsFromListSize:[buttons count]];
     int i = 0;
@@ -421,12 +414,18 @@
         if([needsScrollToEnd isEqualToString:@"true"])
         {
             currentBtn.enabled = NO;
-            [currentBtn setBackgroundColor:CUSTOM_BLUE_COLOR_DISABLED];
-            [[currentBtn layer] setBorderColor:[CUSTOM_BLUE_COLOR_DISABLED CGColor]];
+            [currentBtn setBackgroundColor:[UIColor colorWithHexString:ORANGE_DISABLED]];
+            [[currentBtn layer] setBorderColor:[[UIColor colorWithHexString:ORANGE_DISABLED] CGColor]];
         }
         
         ++i;
     }
+}
+
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    UIStatusBarStyle style = UIStatusBarStyleDefault;
+    return style;
 }
 
 @end

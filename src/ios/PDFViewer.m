@@ -27,7 +27,7 @@
                                                                   withSubject:subject
                                                               withDescription:description
                                                                 andCallbackId:command.callbackId];
-    
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
     [self.viewController presentViewController:vc animated:YES completion:nil];
 }
 @end

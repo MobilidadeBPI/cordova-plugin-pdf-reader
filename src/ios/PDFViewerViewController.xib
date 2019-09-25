@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="lucinda_grande_regular.ttf">
-            <string>LucidaGrande</string>
+        <array key="Barlow-Regular.ttf">
+            <string>Barlow-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -56,7 +54,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHu-Vx-Agr" userLabel="Title">
-                            <rect key="frame" x="207.33333333333334" y="40.333333333333336" width="0.0" height="0.0"/>
+                            <rect key="frame" x="207" y="40" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -86,7 +84,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="kgK-ee-Vj6" firstAttribute="centerY" secondItem="DnW-0D-Z5V" secondAttribute="centerY" constant="10" id="2ZN-GJ-hpy"/>
                         <constraint firstItem="ads-TC-Ym2" firstAttribute="centerY" secondItem="DnW-0D-Z5V" secondAttribute="centerY" constant="10" id="Nzx-Zh-H4w"/>
@@ -110,27 +108,20 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxo-Ps-wHF" userLabel="Footer View">
                     <rect key="frame" x="0.0" y="651" width="414" height="85"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiP-Te-TZU" userLabel="Line">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
-                            <color key="backgroundColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="1" id="GTq-1Z-9qV"/>
-                            </constraints>
-                        </view>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7p-Uk-o9a" userLabel="Btn2">
-                            <rect key="frame" x="153" y="34" width="108" height="40"/>
+                            <rect key="frame" x="153" y="35" width="108" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="108" id="aRo-er-yHk" userLabel="Btn2 Width"/>
                                 <constraint firstAttribute="height" constant="40" id="zHO-5k-a8g"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
                             <state key="normal" title="Aceito">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <state key="selected" image="bt_naceito_selected"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="2"/>
+                                    <integer key="value" value="4"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
@@ -139,25 +130,25 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hg2-Xe-HuG" userLabel="Btn3">
-                            <rect key="frame" x="286" y="34" width="108" height="40"/>
+                            <rect key="frame" x="286" y="35" width="108" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="PjC-sA-lcn"/>
                                 <constraint firstAttribute="width" constant="108" id="tqN-39-xts" userLabel="Btn3 Width"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
                             <state key="normal" title="Não Aceito">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.25625210999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <state key="highlighted">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="2"/>
+                                    <integer key="value" value="4"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 <userDefinedRuntimeAttribute type="color" keyPath="layer.borderIBColor">
-                                    <color key="value" red="0.0" green="0.0" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="value" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                     <integer key="value" value="1"/>
@@ -168,11 +159,11 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="901" verticalCompressionResistancePriority="901" text="Descrição default" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRl-0e-e4u">
-                            <rect key="frame" x="20" y="10" width="374" height="14"/>
+                            <rect key="frame" x="20" y="10" width="374" height="15"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="CbP-gy-Bmx"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="14"/>
                             <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -185,14 +176,14 @@
                                 <constraint firstAttribute="width" constant="108" id="yZm-wP-KRK"/>
                                 <constraint firstAttribute="height" constant="40" id="yhD-d4-Qeh"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
                             <state key="normal" title="Aceito">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <state key="selected" image="bt_naceito_selected"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="2"/>
+                                    <integer key="value" value="4"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
@@ -204,7 +195,6 @@
                     <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="GUL-Tn-SiX" firstAttribute="width" secondItem="hg2-Xe-HuG" secondAttribute="width" id="0MI-Be-PsE" userLabel="Btn1 Width Equals Btn3 Constraint"/>
-                        <constraint firstAttribute="trailing" secondItem="PiP-Te-TZU" secondAttribute="trailing" id="71T-N8-4tL"/>
                         <constraint firstItem="hg2-Xe-HuG" firstAttribute="top" secondItem="qRl-0e-e4u" secondAttribute="bottom" constant="10" id="8pG-lB-IOz"/>
                         <constraint firstItem="hg2-Xe-HuG" firstAttribute="centerY" secondItem="X7p-Uk-o9a" secondAttribute="centerY" id="B2W-wg-6mR"/>
                         <constraint firstItem="X7p-Uk-o9a" firstAttribute="top" secondItem="qRl-0e-e4u" secondAttribute="bottom" constant="10" id="BWe-Kk-hAT"/>
@@ -213,8 +203,6 @@
                         <constraint firstItem="GUL-Tn-SiX" firstAttribute="centerY" secondItem="dxo-Ps-wHF" secondAttribute="centerY" priority="900" id="Djp-ts-Ehh"/>
                         <constraint firstItem="X7p-Uk-o9a" firstAttribute="width" secondItem="GUL-Tn-SiX" secondAttribute="width" id="EMJ-WH-psJ" userLabel="Btn2 Width Equals Btn1 Constraint"/>
                         <constraint firstAttribute="trailing" secondItem="hg2-Xe-HuG" secondAttribute="trailing" constant="20" id="FFB-XB-obf"/>
-                        <constraint firstItem="PiP-Te-TZU" firstAttribute="top" secondItem="dxo-Ps-wHF" secondAttribute="top" id="OKl-0r-8MB"/>
-                        <constraint firstItem="PiP-Te-TZU" firstAttribute="leading" secondItem="dxo-Ps-wHF" secondAttribute="leading" id="Xsi-5H-k0g"/>
                         <constraint firstItem="X7p-Uk-o9a" firstAttribute="baseline" secondItem="GUL-Tn-SiX" secondAttribute="baseline" id="Xsl-Ly-8DW" userLabel="Btn3.baseline = Btn1.baseline"/>
                         <constraint firstItem="qRl-0e-e4u" firstAttribute="centerX" secondItem="dxo-Ps-wHF" secondAttribute="centerX" id="bcb-Ha-uJg"/>
                         <constraint firstItem="hg2-Xe-HuG" firstAttribute="leading" secondItem="X7p-Uk-o9a" secondAttribute="trailing" constant="25" id="eNT-YX-koz" userLabel="Btn3.leading = Btn2.trailing + 20"/>
