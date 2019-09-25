@@ -9,6 +9,6 @@
     <color name="grayed_out">#676697</color>
     <color name="text_primario">#4D4D4D</color>
     <color name="btn_cor_principal">#FF6600</color>
-    <color name="btn_cor_principal_disabled">#66FFC299</color>
+    <color name="btn_cor_principal_disabled">#FFC299</color>
 
 </resources>
